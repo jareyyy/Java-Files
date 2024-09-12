@@ -1,0 +1,61 @@
+public class mainFile {
+    public static void main(String[] args) {
+
+        Dog dogObj = new Dog();
+        //dogObj.name = "Bambi";
+        //dogObj.is_Male = true;
+        //dogObj.num_of_Puppies = 2;
+
+        //System.out.println(dogObj.name);
+        //System.out.println(dogObj.is_Male);
+        //System.out.println(dogObj.num_of_Puppies);
+
+        dogObj.set_Name("Chowlong");
+       // System.out.println(dogObj.showName());
+       String Name_SET = dogObj.showName();
+       System.out.println(Name_SET);
+
+        dogObj.set_Num_of_Puppies(35);
+        //System.out.println(dogObj.show_Num_Of_Puppies());
+        int showNumPup = dogObj.show_Num_Of_Puppies();
+        System.out.println(showNumPup);
+
+        System.out.println(dogObj.bark());
+
+        dogObj.list_of_Puppies[0] = "Bob";
+        dogObj.list_of_Puppies[1] = "Kazumi";
+        dogObj.list_of_Puppies[2] = "Xiaoyu";
+        dogObj.list_of_Puppies[3] = "Dragunov";
+        dogObj.list_of_Puppies[4] = "Gorlock The Destroyer";
+
+        for (int i = 0; i < dogObj.list_of_Puppies.length; i++) {
+            System.out.println(dogObj.list_of_Puppies[i]);
+        }
+    }
+}
+
+class Dog {
+    String name;
+    boolean is_Male;
+    int num_of_Puppies;
+    String[] list_of_Puppies = new String[5];
+
+   public void set_Name(String name){
+         this.name = name;
+    }
+    public String showName(){
+        return name;
+    }
+
+    public String bark(){
+        return "Woof! Woof!";
+    }
+
+    public void set_Num_of_Puppies(int num_of_Puppies){
+        this.num_of_Puppies = num_of_Puppies;
+    }
+    public int show_Num_Of_Puppies(){
+        return num_of_Puppies;
+    }
+
+}
